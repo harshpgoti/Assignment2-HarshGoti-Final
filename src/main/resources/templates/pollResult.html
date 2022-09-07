@@ -1,0 +1,35 @@
+<!--  Name: Harsh Goti
+ * Id: 991625543
+  	  Date: 27th october,2021 
+  	  pollResult.html
+ -->
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+span{
+
+    display: inline-flex;
+}
+</style>
+</head>
+<body>
+<h1 th:text="${poll.title}">title</h1>
+<h2>------------------------------------</h2>
+<span>
+<h1 th:text="${poll.answer1}">title</h1><h1 th:text="${percentage1}">title</h1>
+</span>
+<br>
+<span>
+<h1 th:text="${poll.answer2}">title</h1><h1 th:text="${percentage2}">title</h1>
+</span>
+<br>
+<span>
+<h1 th:text="${poll.answer3}">title</h1><h1 th:text="${percentage3}">title</h1>
+</span>
+<br>
+<a href="/"> INDEX</a>
+</body>
+</html>

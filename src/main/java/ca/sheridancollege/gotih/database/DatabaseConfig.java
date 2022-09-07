@@ -1,0 +1,22 @@
+/* Name: Harsh Goti
+ * Id: 991625543
+ * Date: 27th october,2021 
+ * DatabaseConfig.java
+*/
+package ca.sheridancollege.gotih.database;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+@Configuration
+public class DatabaseConfig {
+
+	@Bean
+	public NamedParameterJdbcTemplate namedParameterJdbcTemplate(DataSource dataSource) {
+		return new NamedParameterJdbcTemplate(dataSource);
+	}
+
+}

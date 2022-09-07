@@ -1,0 +1,30 @@
+<!--  Name: Harsh Goti
+ * Id: 991625543
+  	  Date: 27th october,2021 
+  	  answers.html
+ -->
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:text="${poll.title}">title</h1>
+
+
+<form th:object="${poll}" method="post" th:action="@{/addAnswer}" action="">
+
+		<label th:text="*{answer1}">question1</label> 
+    	<input type="checkbox"  th:value=1 name="answer"></input>
+    	
+    	<label th:text="*{answer2}">question2</label>
+    	<input type="checkbox"  th:value=2 name="answer"></input>
+    	
+    	<label th:text="*{answer3}">question3</label>
+    	<input type="checkbox"  th:value=3 name="answer"></input>
+    	
+    	<input type="submit" value="submit" />
+</form>
+</body>
+</html>
